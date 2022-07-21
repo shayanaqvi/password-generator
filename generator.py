@@ -3,7 +3,7 @@ import random
 
 def generate_password():
 	
-	password_length = input("How long should your new password be? ")
+	password_length = input("\nHow many characters should your new password be? ")
 
 	letters = ["a", "b", "c", "d", "e", "f", 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 	numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -13,7 +13,9 @@ def generate_password():
 
 	increment = 0
 
-	while increment <= int(password_length):
+	print("\nYour new password is: ")
+
+	while increment <= (int(password_length) - 1):
 		increment += 1
 		select_character = random.randint(0, 2)
 
@@ -26,5 +28,7 @@ def generate_password():
 
 		print(password, end='')
 
+	print("\n\nKeep it safe!")
+
 generate_password()
-print("")
+print("\n")
