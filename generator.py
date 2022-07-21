@@ -8,9 +8,10 @@ def get_password_length():
 
 	if password_length.isdigit() == False:
 		print("\nHey! That's not a number!")
+		time.sleep(0.75)
 		system('exit')
 	elif int(password_length) <= 7:
-		print("Hmmmmmmmmmmm...")
+		print("\nHmmmmmmmmmmm...")
 		time.sleep(0.75)
 		print("That's not long enough. A good password is at least 8 characters.")
 		time.sleep(0.75)
@@ -44,7 +45,8 @@ def generate_password(password_length):
 		print(password, end='')
 
 	print("\n\nKeep it safe!")
-	time.sleep(0.5)
+	time.sleep(0.75)
+
 
 get_password_length()
 
