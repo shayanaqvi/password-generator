@@ -8,18 +8,21 @@ def generate_password():
 	letters = ["a", "b", "c", "d", "e", "f", 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 	numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
+	password = []
 
-	for i in range(0, int(password_length)):
+	increment = 0
 
+	while increment <= int(password_length):
+		increment += 1
 		select_character = random.randint(0, 1)
 
 		if select_character == 0:
-			print(letters[random.randint(0, 25)], end='')
+			password =  letters[random.randint(0, 25)]
 		elif select_character == 1:
-			print(numbers[random.randint(0, 9)], end='')
+			password = numbers[random.randint(0, 9)]
 
-		#print(letters[random.randint(0, 25)], end='')
-		#print(numbers[random.randint(0, 9)], end='')
-	print("")
+
+		print(password, end='')
 
 generate_password()
+print("")
