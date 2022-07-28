@@ -3,21 +3,14 @@ import random
 from os import *
 
 def get_password_length():
-	time.sleep(0.5)
 	password_length = input("\nHow many characters should your new password be? ")
+	try:
+		password_length_int = int(password_length)
+	except ValueError:
+		quit()
 
-	if password_length.isdigit() == False:
-		print("\nHey! That's not a number!")
-		time.sleep(0.75)
-		system('exit')
-	elif int(password_length) <= 7:
-		print("\nHmmmmmmmmmmm...")
-		time.sleep(0.75)
-		print("That's not long enough. A good password is at least 8 characters.")
-		time.sleep(0.75)
-		system('exit')
-	elif password_length.isdigit() == True:
-		generate_password(password_length)
+	generate_password(password_length_int)
+
 
 def generate_password(password_length):
 
@@ -25,27 +18,26 @@ def generate_password(password_length):
 	numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 	special_chars = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "[", "]", ";", ":", "<", "|", ">", "?", "/"]
 
+
 	password = []
 
-	increment = 0
+	for number in range(password_length):
+		random_letter = letters[random.randint(0, 25)]
+		random_number = numbers[random.randint(0, 9)]
+		random_special_character = special_chars[random.randint(0, 23)]
+
+		key = random.randint(0, 2)
+
+		if key == 0:
+			print(random_letter)
+		elif key == 1:
+			print(random_number)
+		elif key == 2:
+			print(random_special_character)
 
 	print("\nYour new password is: ")
 
-	while increment <= (int(password_length) - 1):
-		increment += 1
-		select_character = random.randint(0, 2)
-
-		if select_character == 0:
-			password = letters[random.randint(0, 25)]
-		elif select_character == 1:
-			password = numbers[random.randint(0, 9)]
-		elif select_character == 2:
-			password = special_chars[random.randint(0, 23)]
-
-		print(password, end='')
-
 	print("\n\nKeep it safe!")
-	time.sleep(0.75)
 
 
 get_password_length()
