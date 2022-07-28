@@ -4,16 +4,28 @@ from tkinter import *
 from os import *
 
 def get_password_length():
-	password_length = input("\nHow many characters should your new password be? ")
-	try:
-		password_length_int = int(password_length)
-	except ValueError:
-		quit()
+	password_length_entry = Entry(root, width=50)
+	password_length_entry.pack()
 
-	generate_password(password_length_int)
+	def myClick():
+		myLabel = Label(root, text=password_length_entry.get())
+		myLabel.pack()
+
+	myButton = Button(root, text="Generate", command=lambda: generate_password(password_length_entry.get()))
+	myButton.pack()
+
+
+
+
+
+
+
+
+
 
 
 def generate_password(password_length):
+	password_length_int = int(password_length)
 
 	letters = ["a", "b", "c", "d", "e", "f", 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 	numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -22,8 +34,7 @@ def generate_password(password_length):
 
 	password = []
 
-
-	for number in range(password_length):
+	for number in range(password_length_int):
 		random_letter = letters[random.randint(0, 25)]
 		random_number = numbers[random.randint(0, 9)]
 		random_special_character = special_chars[random.randint(0, 23)]
