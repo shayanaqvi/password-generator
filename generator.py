@@ -1,5 +1,6 @@
 import time
 import random
+from tkinter import *
 from os import *
 
 def get_password_length():
@@ -21,6 +22,7 @@ def generate_password(password_length):
 
 	password = []
 
+
 	for number in range(password_length):
 		random_letter = letters[random.randint(0, 25)]
 		random_number = numbers[random.randint(0, 9)]
@@ -29,17 +31,17 @@ def generate_password(password_length):
 		key = random.randint(0, 2)
 
 		if key == 0:
-			print(random_letter)
+			password.append(random_letter)
 		elif key == 1:
-			print(random_number)
+			password.append(random_number)
 		elif key == 2:
-			print(random_special_character)
+			password.append(random_special_character)
 
-	print("\nYour new password is: ")
+	generated_pswd_lbl = Label(root, text=password).pack()
 
-	print("\n\nKeep it safe!")
-
+root = Tk()
+root.title("Password Generator")
 
 get_password_length()
 
-print("")
+root.mainloop()
