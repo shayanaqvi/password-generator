@@ -1,5 +1,5 @@
 # Password generator
-A CLI utility that generates a passwords. It does not store any previously generated passwords.
+A GUI utility that generates a passwords. It does not store any previously generated passwords.
 
 ## Usage
 1. Download this repository
