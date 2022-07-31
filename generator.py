@@ -21,8 +21,44 @@ class gui(QMainWindow):
 		self.generate_uname_button.clicked.connect(self.generate_uname)
 
 	def generate_uname(self):
-		pref_words = []
-		suf_words = []
+		pref_words = ["tiny", "lucky", "far", "unsuitable", "melted", "eager", "dependent", "complex", "puzzling", "impartial", "plant", "able", "materialistic", "based", "pure", "many", "free", "delirious", "cultural", "right", "nifty", "resolute", "pushy", "smooth", "sincere", "comptetitive", "difficult", "tasteful", "various", "symptomatic", "overjoyed", "weak", "truculent", "receptive", "endurable", "mature", "envious", "sudden", "swanky", "absurd", "private", "juicy", "instinctive", "deeply", "adorable", "colourful", "opposite", "gorgeous", "obvious", "accidental"]
+		suf_words = ["cat", "climate", "theory", "role", "region", "king", "virus", "excitement", "perspective", "pollution", "cabinet", "story", "actor", "consequence", "injury", "newspaper", "language", "hall", "tale", "accident", "assignment", "republic", "length", "signature", "establishment", "manager", "drawing", "grocery", "protection", "dealer", "winner", "storage", "basis", "instance", "potato", "wedding", "message", "introduction", "son", "recording", "appointment", "interaction", "lab", "village", "organization", "chemistry", "enthusiasm", "ad", "celebration", "addition"]
+		numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+		frst_word = pref_words[random.randint(0, 49)]
+		scnd_word = suf_words[random.randint(0, 49)]
+		rand_num_1 = numbers[random.randint(0, 9)]
+		rand_num_2 = numbers[random.randint(0, 9)]
+
+
+		final_username = ""
+
+		while True:
+
+			if self.incl_uname_nums_cbox.isChecked() == True:
+				if self.incl_uname_cpt_cbox.isChecked() == True:
+					final_username = f"{frst_word.title()}{scnd_word.title()}{rand_num_1}{rand_num_2}"
+					self.new_uname_field.setText(final_username)
+					break
+				else:
+					final_username = f"{frst_word}{scnd_word}{rand_num_1}{rand_num_2}"
+					self.new_uname_field.setText(final_username)
+					break
+
+			if self.incl_uname_cpt_cbox.isChecked() == True:
+				if self.incl_uname_nums_cbox.isChecked() == True:
+					final_username = f"{frst_word.title()}{scnd_word.title()}{rand_num_1}{rand_num_2}"
+					self.new_uname_field.setText(final_username)
+					break
+				else:
+					final_username = f"{frst_word.title()}{scnd_word.title()}"
+					self.new_uname_field.setText(final_username)
+					break
+
+			if self.incl_uname_nums_cbox.isChecked() == False or self.incl_uname_cpt_cbox.isChecked() == False:
+				final_username = f"{frst_word}{scnd_word}"
+				self.new_uname_field.setText(final_username)
+				break
 
 	def generate_password(self):
 		pswd_length = int(self.pswd_length_field.text())
