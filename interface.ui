@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>279</height>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -68,7 +68,7 @@
       <x>50</x>
       <y>110</y>
       <width>701</width>
-      <height>111</height>
+      <height>211</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -85,6 +85,9 @@
        <width>521</width>
        <height>25</height>
       </rect>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="pswd_length_frame">
@@ -104,13 +107,64 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>60</y>
+       <y>160</y>
        <width>661</width>
        <height>29</height>
       </rect>
      </property>
      <property name="text">
       <string>Generate New Password</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="incl_spec_chars_cbox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>261</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Include Special Characters</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="incl_nums_cbox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>161</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Include Numbers</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="incl_lets_cbox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>661</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Include Letters</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
@@ -121,7 +175,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>29</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
