@@ -30,12 +30,57 @@ class gui(QMainWindow):
 
 			key = random.randint(0, 2)
 
-			if self.incl_spec_chars_cbox.isChecked() == True:
-				password.append(spec_chars[random.randint(0, 23)])
-			if self.incl_nums_cbox.isChecked() == True:
-				password.append(numbers[random.randint(0, 9)])
-			if self.incl_lets_cbox.isChecked() == True:
-				password.append(letters[random.randint(0, 50)])
+			if key == 0:
+				if self.incl_spec_chars_cbox.isChecked() == True:
+					password.append(spec_chars[random.randint(0, 23)])
+				else:
+					subkey = random.randint(0, 1)
+
+					if self.incl_nums_cbox.isChecked() == True:
+						if subkey == 0:
+							password.append(numbers[random.randint(0, 9)])
+						if subkey == 1:
+							password.append(numbers[random.randint(0, 9)])
+					if self.incl_lets_cbox.isChecked() == True:
+						if subkey == 0:
+							password.append(letters[random.randint(0, 50)])
+						if subkey == 1:
+							password.append(letters[random.randint(0, 50)])
+			elif key == 1:
+				if self.incl_nums_cbox.isChecked() == True:
+					password.append(numbers[random.randint(0, 9)])
+				else:
+					subkey = random.randint(0, 1)
+
+					if self.incl_spec_chars_cbox.isChecked() == True:
+						if subkey == 0:
+							password.append(spec_chars[random.randint(0, 23)])
+						if subkey == 1:
+							password.append(spec_chars[random.randint(0, 23)])
+
+					if self.incl_lets_cbox.isChecked() == True:
+						if subkey == 0:
+							password.append(letters[random.randint(0, 50)])
+						if subkey == 1:
+							password.append(letters[random.randint(0, 50)])
+
+
+			elif key == 2:
+				if self.incl_lets_cbox.isChecked() == True:
+					password.append(letters[random.randint(0, 50)])
+				else:
+					subkey = random.randint(0, 1)
+
+					if self.incl_nums_cbox.isChecked() == True:
+						if subkey == 0:
+							password.append(numbers[random.randint(0, 9)])
+						if subkey == 1:
+							password.append(numbers[random.randint(0, 9)])
+					if self.incl_spec_chars_cbox.isChecked() == True:
+						if subkey == 0:
+							password.append(spec_chars[random.randint(0, 23)])
+						if subkey == 1:
+							password.append(spec_chars[random.randint(0, 23)])
 
 
 
