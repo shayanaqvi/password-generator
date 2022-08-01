@@ -11,7 +11,7 @@ class gui(QMainWindow):
 
 		super(gui, self).__init__()
 
-		self.setFixedSize(800, 420)
+		self.setFixedSize(800, 448)
 
 		uic.loadUi("interface.ui", self)
 		self.show()
@@ -21,14 +21,14 @@ class gui(QMainWindow):
 		self.generate_uname_button.clicked.connect(self.generate_uname)
 
 	def generate_uname(self):
-		pref_words = ["tiny", "lucky", "far", "unsuitable", "melted", "eager", "dependent", "complex", "puzzling", "impartial", "plant", "able", "materialistic", "based", "pure", "many", "free", "delirious", "cultural", "right", "nifty", "resolute", "pushy", "smooth", "sincere", "comptetitive", "difficult", "tasteful", "various", "symptomatic", "overjoyed", "weak", "truculent", "receptive", "endurable", "mature", "envious", "sudden", "swanky", "absurd", "private", "juicy", "instinctive", "deeply", "adorable", "colourful", "opposite", "gorgeous", "obvious", "accidental"]
-		suf_words = ["cat", "climate", "theory", "role", "region", "king", "virus", "excitement", "perspective", "pollution", "cabinet", "story", "actor", "consequence", "injury", "newspaper", "language", "hall", "tale", "accident", "assignment", "republic", "length", "signature", "establishment", "manager", "drawing", "grocery", "protection", "dealer", "winner", "storage", "basis", "instance", "potato", "wedding", "message", "introduction", "son", "recording", "appointment", "interaction", "lab", "village", "organization", "chemistry", "enthusiasm", "ad", "celebration", "addition"]
+		pref_words = ["tiny", "lucky", "far", "unsuitable", "melted", "eager", "dependent", "complex", "puzzling", "impartial", "plant", "able", "materialistic", "based", "pure", "many", "free", "delirious", "cultural", "right", "nifty", "resolute", "pushy", "smooth", "sincere", "comptetitive", "difficult", "tasteful", "various", "symptomatic", "overjoyed", "weak", "truculent", "receptive", "endurable", "mature", "envious", "sudden", "swanky", "absurd", "private", "juicy", "instinctive", "deeply", "adorable", "colourful", "opposite", "gorgeous", "obvious", "accidental", "staking", "guttural", "blushing", "heartbreaking", "sore", "sticky", "far", "detailed", "crabby", "sturdy", "cultural", "jealous", "beneficial", "nimble", "useful", "quack", "unequal", "whispering", "unequaled", "productive", "uncovered", "delicious", "hard", "soft", "pentinent", "juicy", "powerful", "flippant", "nasty", "cold", "guarded", "slippery", "biased", "cuddly", "talented", "fearful", "obviously", "sudden", "next", "shy", "direful", "foolish", "fast", "upset", "tender", "acrid", "civil" ,"consciou", "deep", "solid"]
+		suf_words = ["cat", "climate", "theory", "role", "region", "king", "virus", "excitement", "perspective", "pollution", "cabinet", "story", "actor", "consequence", "injury", "newspaper", "language", "hall", "tale", "accident", "assignment", "republic", "length", "signature", "establishment", "manager", "drawing", "grocery", "protection", "dealer", "winner", "storage", "basis", "instance", "potato", "wedding", "message", "introduction", "son", "recording", "appointment", "interaction", "lab", "village", "organization", "chemistry", "enthusiasm", "ad", "celebration", "addition", "cell", "affair", "guest", "county", "shopping", "finding", "news", "science", "history", "poem" "army", "hair", "friend", "republic", "hat", "actor", "health", "sector", "agency", "software", "father", "mother", "coffee", "atmosphere", "breath", "goal", "awareness", "error", "recipe", "blood", "fact", "disaster", "application", "activity", "apartment", "depth", "drink", "control", "collection", "description", "pie", "meal", "instructio", 'surgery', 'volume', 'committee', 'explanatio', 'hotel', 'department', 'departure']
 		numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-		frst_word = pref_words[random.randint(0, 49)]
-		scnd_word = suf_words[random.randint(0, 49)]
-		rand_num_1 = numbers[random.randint(0, 9)]
-		rand_num_2 = numbers[random.randint(0, 9)]
+		frst_word = pref_words[random.randint(0, (len(pref_words) - 1))]
+		scnd_word = suf_words[random.randint(0, (len(suf_words) - 1))]
+		rand_num_1 = numbers[random.randint(0, (len(numbers) - 1))]
+		rand_num_2 = numbers[random.randint(0, (len(numbers) - 1))]
 
 
 		final_username = ""
