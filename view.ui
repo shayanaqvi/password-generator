@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>view_info</class>
+ <widget class="QMainWindow" name="view_info">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>448</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="pswd_length_field">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>761</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="new_pwsd_lbl">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>10</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Vault</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>771</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>756</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>730</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>GroupBox</string>
+        </property>
+        <widget class="QLineEdit" name="vw_pswd">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>65</y>
+           <width>581</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="vw_uname">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>30</y>
+           <width>641</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="final_pswd_lbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>71</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="final_uname_lbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>35</y>
+           <width>71</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Username</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="notes_lbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>105</y>
+           <width>71</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Notes</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="vw_notes">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>100</y>
+           <width>641</width>
+           <height>91</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="vw_btn">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>65</y>
+           <width>51</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>View</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionClose"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
