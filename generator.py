@@ -150,6 +150,7 @@ class Generate_Login_Information(QMainWindow):
 		self.new_pswd_field.setText(password_string[:pswd_length])
 		self.final_pswd_field.setText(password_string[:pswd_length])
 
+
 #The window that shows saved passwords
 class View_Login_Information(QMainWindow):
 	def __init__(self):
