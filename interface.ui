@@ -10,7 +10,11 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
+<<<<<<< HEAD
     <height>448</height>
+=======
+    <height>382</height>
+>>>>>>> e7f4589c7829dfe4c332282c8706486e027f6ead
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,6 +42,7 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
+<<<<<<< HEAD
     <widget class="QWidget" name="gen_pswd">
      <attribute name="title">
       <string>Generate Password</string>
@@ -370,6 +375,116 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+=======
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="Frame">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>110</y>
+      <width>701</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QLineEdit" name="pswd_length_field">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>521</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pswd_length_frame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>23</y>
+       <width>131</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pasword Length</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generate_pwsd_button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>661</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generate New Password</string>
+     </property>
+>>>>>>> e7f4589c7829dfe4c332282c8706486e027f6ead
+    </widget>
+    <widget class="QCheckBox" name="incl_spec_chars_cbox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>261</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Include Special Characters</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="incl_nums_cbox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>161</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Include Numbers</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="incl_lets_cbox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>661</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Include Letters</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
    </widget>
   </widget>
