@@ -2,6 +2,9 @@
 A GUI utility that generates a passwords. It does not store any previously generated passwords.
 Written in Python and Qt.
 
+## Dependencies
+This program needs the PyQt library to run. To install it, run ```pip install pyqt5```.
+
 ## Usage
 1. Download this repository
 2. Extract its contents
